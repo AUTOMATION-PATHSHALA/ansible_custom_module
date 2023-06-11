@@ -38,7 +38,7 @@ def area_of_triangle(inputparam):
         hight = inputparam['hight']
         breath = inputparam['breath']
 
-        return False, True, f"Area of triangle : {str(int(hight) * int(breath))}"
+        return False, True, f"Area of triangle : {str((int(hight) * int(breath))/2)}"
     except Exception as ex:
         return True, False, ex.message
     
