@@ -1,0 +1,25 @@
+---
+
+- hosts: localhost
+  gather_facts: false
+  tasks:
+
+    - name: Calculate area of triangle
+      get_area:
+        hight: 20
+        breath: 30
+        # action: "area_of_triangle"
+      register: get_area_of_triangle
+
+    - ansible.builtin.debug:
+        var: get_area_of_triangle
+
+    - name: Calculate area of rectangle
+      get_area:
+        length: 20
+        breath: 20
+        action: "area_of_rectangle"
+      register: get_area_of_rectangle
+
+    - ansible.builtin.debug:
+        var: get_area_of_rectangle
